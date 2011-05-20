@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4fbfd07a-09b7-4934-936e-78fddc718122}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>WebKitClrGenerator</RootNamespace>
+    <AssemblyName>WebKitClrGenerator</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Name>WebKitClrGenerator</Name>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="CppCodeProvider, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>CppCodeProvider</Name>
+      <AssemblyName>CppCodeProvider.dll</AssemblyName>
+    </Reference>
+    <Reference Include="Microsoft.M.Evaluator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Name>Microsoft.M.Evaluator</Name>
+      <AssemblyName>Microsoft.M.Evaluator.dll</AssemblyName>
+      <HintPath>..\..\Program Files %28x86%29\Microsoft Oslo SDK 1.0\Bin\Microsoft.M.Evaluator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.M.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Name>Microsoft.M.Framework</Name>
+      <AssemblyName>Microsoft.M.Framework.dll</AssemblyName>
+      <HintPath>..\..\Program Files %28x86%29\Microsoft Oslo SDK 1.0\Bin\Microsoft.M.Framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.M.Grammar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Name>Microsoft.M.Grammar</Name>
+      <AssemblyName>Microsoft.M.Grammar.dll</AssemblyName>
+      <HintPath>..\..\Program Files %28x86%29\Microsoft Oslo SDK 1.0\Bin\Microsoft.M.Grammar.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Dataflow, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Name>System.Dataflow</Name>
+      <AssemblyName>System.Dataflow.dll</AssemblyName>
+      <HintPath>..\..\Program Files %28x86%29\Microsoft Oslo SDK 1.0\Bin\System.Dataflow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xaml, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Name>Xaml</Name>
+      <AssemblyName>Xaml.dll</AssemblyName>
+      <HintPath>..\..\Program Files %28x86%29\Microsoft Oslo SDK 1.0\Bin\Xaml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\FSharp\1.0\Microsoft.FSharp.Targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	     Other similar extension points exist, see Microsoft.Common.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>
